@@ -8,10 +8,7 @@ My favourite tea is [black tea](https://en.wikipedia.org/wiki/Black_tea)
 
 here is a list of things:
 * Gold
- * sub gold
 * Coal
- * sub coal
-  * sub sub coal
 * Diamonds
 
 > I really like this.  
