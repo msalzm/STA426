@@ -1,0 +1,27 @@
+---
+title: "Week 1 Ex1b"
+author: "Moriz Salz"
+format: html
+editor: visual
+---
+
+## creating the distribution
+
+the distribution is made with n = 100 and mu = 10. the seed is set to always ensure the same outcome
+
+```{r}
+set.seed(210)
+distribution <- rnbinom(n = 100,mu = 10, size = 2)
+
+```
+
+the mean and variance of the sample is `r mean(distribution)` and `r var(distribution)` respectively.
+
+## creating the histograms
+
+the linear and logarithmized histograms are made.
+
+```{r}
+hist(distribution, main = "linear histogram" )
+hist(log(distribution), main = "log(x) histogram")
+```
