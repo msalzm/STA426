@@ -11,7 +11,7 @@ the distribution is made with n = 100 and mu = 10. the seed is set to always ens
 
 ```{r}
 set.seed(210)
-distribution <- rnbinom(n = 100,mu = 10, size = 2)
+distribution <- rnbinom(n = 100,mu = 10, size = 1/2)
 
 ```
 
