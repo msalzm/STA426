@@ -131,22 +131,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="creating-the-distribution" class="level2">
 <h2 class="anchored" data-anchor-id="creating-the-distribution">creating the distribution</h2>
-<p>the distribution is made with n = 100 and mu = 10. the seed is set to always ensure the same outcome</p>
+<p>the distribution is made with n = 100 and mu = 10. The seed is set to always ensure the same outcome.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">210</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>distribution <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="at">n =</span> <span class="dv">100</span>,<span class="at">mu =</span> <span class="dv">10</span>, <span class="at">size =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">80</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>distribution <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="at">n =</span> <span class="dv">100</span>,<span class="at">mu =</span> <span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>the mean and variance of the sample is 10.87 and 85.4677778 respectively.</p>
+<p>the mean and variance of the sample is 10.51 and 220.9190909 respectively.</p>
 </section>
 <section id="creating-the-histograms" class="level2">
 <h2 class="anchored" data-anchor-id="creating-the-histograms">creating the histograms</h2>
 <p>the linear and logarithmized histograms are made.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(distribution, <span class="at">main =</span> <span class="st">"linear histogram"</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(distribution, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">xlim =</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">110</span>), <span class="at">main =</span> <span class="st">"linear histogram"</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Ex1b_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log</span>(distribution), <span class="at">main =</span> <span class="st">"log(x) histogram"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log</span>(distribution), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">15</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">5</span>), <span class="at">main =</span> <span class="st">"log(x) histogram"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Ex1b_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="672"></p>
 </div>

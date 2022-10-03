@@ -7,10 +7,10 @@ editor: visual
 
 ## creating the distribution
 
-the distribution is made with n = 100 and mu = 10. the seed is set to always ensure the same outcome
+the distribution is made with n = 100 and mu = 10. The seed is set to always ensure the same outcome.
 
 ```{r}
-set.seed(210)
+set.seed(80)
 distribution <- rnbinom(n = 100,mu = 10, size = 1/2)
 
 ```
@@ -22,6 +22,6 @@ the mean and variance of the sample is `r mean(distribution)` and `r var(distrib
 the linear and logarithmized histograms are made.
 
 ```{r}
-hist(distribution, main = "linear histogram" )
-hist(log(distribution), main = "log(x) histogram")
+hist(distribution, ylim = c(0,100), xlim =c(0,110), main = "linear histogram" )
+hist(log(distribution), ylim = c(0,15), xlim = c(0,5), main = "log(x) histogram")
 ```
